@@ -1,0 +1,27 @@
+from google.colab import files
+
+#carga el archivo CSV desde tu computador
+uploaded = files.upload()
+import pandas as pd
+
+#usa el nombre correcto del archivo que subiste
+df = pd.read_csv('Hot100.csv')  #reemplaza con el nombre exacto del archivo
+import pandas as pd
+
+#usa el nombre correcto del archivo que subiste
+df = pd.read_csv('Hot100.csv')  #reemplaza con el nombre exacto del archivo
+#filtramos solo las columnas que usaremos
+df_filtered = df[['Year', 'Valence']]
+#filtramos solo las columnas que usaremos
+df_filtered = df[['Year', 'Valence']]
+
+import matplotlib.pyplot as plt
+
+#hacemos un gráfico de la evolución del Valence
+plt.figure(figsize=(10, 6))
+plt.plot(valence_by_year['Year'], valence_by_year['Valence'], marker='o', color='b')
+plt.title('¿Nos hemos vuelto más tristes o más alegres con el tiempo?')
+plt.xlabel('Año')
+plt.ylabel('Promedio de Valence (0 = Triste, 1 = Alegre)')
+plt.grid(True)
+plt.show()
